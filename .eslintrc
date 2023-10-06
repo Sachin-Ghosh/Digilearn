@@ -2,10 +2,14 @@
   "extends": ["react-app", "react-app/jest", "plugin:prettier/recommended", "prettier", "plugin:cypress/recommended"],
   "plugins": ["prettier"],
   "rules": {
-    "prettier/prettier": ["warn", {
-      "singleQuote": true,
-      "printWidth": 150
-    }],
+    "prettier/prettier": [
+      "error", {
+           "endOfLine":"auto",
+           "singleQuote": true,
+           "parser": "flow" 
+      }
+  ],
+
     "import/first": 0
   },
   "env": {
@@ -13,5 +17,5 @@
     "node": true,
     "es6": true
   },
-  "parser": "babel-eslint"
+  "parser": "@babel/eslint-parser"
 }

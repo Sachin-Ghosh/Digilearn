@@ -10,5 +10,5 @@ export const store = configureStore({
     [notesApi.reducerPath]: notesApi.reducer,
     [groupsApi.reducerPath]: groupsApi.reducer,
   },
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(notesApi.middleware),
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(notesApi.middleware).concat(groupsApi.middleware),
 });
